@@ -24,8 +24,17 @@
 */
 
 function allUniqueCharacters(s) {
-  //Place your solution here:
-  //return false;
+  let obj = {}
+  for (let char of s) {
+    if (obj[char]) {
+      // console.log("Whoops, char already exists: ", char)
+      return false
+    } else {
+      // console.log("First appearence of", char) 
+      obj[char] = 1
+    }
+  }
+  return true
 }
 
 // Example usage:
